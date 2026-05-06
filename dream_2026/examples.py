@@ -39,7 +39,6 @@ def dihedral_group_example():
     polynomial_ring = PolynomialRing(QQ, 'x, y, z, w')
     invariant_pipeline(group, polynomial_ring)
 
-
 def symmetric_group_s4_example():
     # S4 acting on k[x1,x2,x3,x4] via permutation matrices
     # Naive: huge number of monomials up to degree 24
@@ -48,14 +47,12 @@ def symmetric_group_s4_example():
     polynomial_ring = PolynomialRing(QQ, 'x1, x2, x3, x4')
     invariant_pipeline(group, polynomial_ring)
 
-
 def icosahedral_group_example():
     # A5 (icosahedral symmetry) acting on 5 variables, order 60
     print("=== A5 on 5 variables ===")
     group = MatrixGroup(AlternatingGroup(5))
     polynomial_ring = PolynomialRing(QQ, 'x1, x2, x3, x4, x5')
     invariant_pipeline(group, polynomial_ring)
-
 
 def binary_icosahedral_example():
     # Binary icosahedral group (2I), order 120, acts on 2 variables
@@ -69,7 +66,6 @@ def binary_icosahedral_example():
     group = MatrixGroup([gen_s, gen_t])
     polynomial_ring = PolynomialRing(K, 'x, y')
     invariant_pipeline(group, polynomial_ring)
-
 
 if __name__ == '__main__':
     id_group_example()
@@ -85,3 +81,4 @@ if __name__ == '__main__':
     binary_icosahedral_example()
     print()
     icosahedral_group_example()
+    

@@ -6,7 +6,6 @@ from sage.all import *
 from invariants import invariant_pipeline
 import time
 
-
 def benchmark_group(group, polynomial_ring, name, num_runs=1):
     print("===", name, "| order:", group.order(), "| vars:", polynomial_ring.ngens(), "===")
 
@@ -37,7 +36,6 @@ def benchmark_group(group, polynomial_ring, name, num_runs=1):
     print()
 
     return naive_applications, molien_applications, speedup
-
 
 if __name__ == '__main__':
     benchmark_group(
