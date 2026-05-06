@@ -17,22 +17,16 @@ tep. Then the number of such paths that never go below the x-axis (Dyck paths) i
 from sage.all import *
 
 def create_rules(n: int):
-    # goal: create all possible permuation "actions" to perform on the y coordinates of a path
-    # we want 'n' number of 'up' and 'down' actions
     rule = [1] * n + [-1] * n
     permutations = Permutations(rule)
     return permutations
 
 def create_paths(rules):
-    # goal: create possible paths from permutation rules
     paths = []
-    # start at origin
     y_n = 0
-    # technically, we want one path per rule
     for rule in rules:
         path = []
         path.append(y_n)
-        # we can think of an action like a sequence of up / down operations
         for action in rule:
             y_next = path[-1] + action
             path.append(y_next)
@@ -40,10 +34,8 @@ def create_paths(rules):
     return paths
 
 def check_mountain_state(path) -> bool:
-    # first, we check if we land on the x-axis
     if path[-1] != 0:
         return False
-    # now we check if the path stays in positive quadrant
     for point in path:
         if point < 0:
             return False
