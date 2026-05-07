@@ -1,7 +1,7 @@
 ## Sage Studies
 
 ### Description
-This is my personal collection of code written in the service of learning [Sage Math](https://www.sagemath.org/), which is a very rad open-source mathematics software. For now, I will be particularly focused on exploring topics in algebraic combinatorics and methods in experimental mathematics.
+This is my personal collection of code written in the service of learning [SageMath](https://www.sagemath.org/) the open-source mathematics software. For now, I will be particularly focused on exploring topics in algebraic combinatorics and methods in experimental mathematics.
 
 ### Structure
 ```\sage_days```
